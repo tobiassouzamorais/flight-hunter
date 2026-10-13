@@ -1,0 +1,86 @@
+# Flight Hunter configuration.
+# All prices are totals in `currency` for all passengers unless a field says "per person".
+
+trip:
+  passengers: 3                # adults; Google Flights returns the TOTAL price for all of them
+  currency: BRL
+  language: en-US
+
+  # Departure and arrival airports in Brazil. VCP (Viracopos) sometimes undercuts GRU.
+  origins: [GRU, VCP]
+  # Allow flying out of one Brazilian airport and back into the other.
+  allow_mixed_home_airports: true
+
+  # European airports considered as entry or exit points, mapped to their city.
+  gateways:
+    BCN: Barcelona
+    CDG: Paris
+    ORY: Paris
+    FCO: Rome
+    MAD: Madrid
+    LIS: Lisbon
+    MXP: Milan
+
+  # Cities the trip must visit. Entry and exit gateways that are not one of these
+  # cost an extra internal leg, which is charged below so comparisons stay fair.
+  must_visit: [Barcelona, Paris, Rome]
+
+  # Outbound departure window (inclusive) and length of stay in days (inclusive).
+  outbound_from: 2027-01-18
+  outbound_to: 2027-02-06
+  stay_min_days: 14
+  stay_max_days: 16
+
+  max_stops: 2
+  # Reject itineraries longer than this in one direction (hours, door to door in the air plus layovers).
+  max_duration_hours: 30
+  # Hide itineraries built from separate tickets (self-transfer). A missed connection on those
+  # is your problem, not the airline's; risky with three people. Set false to see them anyway.
+  hide_self_transfer: true
+
+# Rough cost of one intra-Europe leg PER PERSON, used only to rank entry/exit combinations.
+# You buy these later; calibrate the number once you have real quotes.
+internal_legs:
+  default_cost_per_person: 450
+  # Optional overrides per unordered city pair, e.g. "Lisbon|Barcelona": 350
+  pair_cost_per_person: {}
+
+search:
+  # The grid is split into shards; each run scrapes one shard so the load on Google stays low.
+  shards: 4
+  hours_per_shard: 3           # with the default cron (every 3 h) the whole grid refreshes every 12 h
+  delay_seconds: [2.5, 6.0]    # random pause between requests
+  retries: 3
+  # Same-airport round trips are priced too, only for these gateways and origins.
+  roundtrip_gateways: [CDG, BCN, FCO, MAD, LIS]
+  roundtrip_origins: [GRU]
+  # How old a quote may be and still be used when combining legs.
+  freshness_hours: 36
+  # Stop scraping after this date (you will have bought by then).
+  stop_after: 2027-01-10
+
+alerts:
+  # Alert whenever the best full itinerary (flights + estimated internal legs, all passengers)
+  # drops below this. Placeholder: calibrate after one or two weeks of baseline data.
+  target_total: 12000
+  # Leg-level anomaly detection (possible error fares).
+  history_days: 14
+  min_history: 4               # observations of the same quote needed before the time-series test runs
+  ratio_vs_history: 0.70       # price <= 70% of its own historical median
+  robust_z: 3.0                # and at least this many robust standard deviations below
+  ratio_vs_neighbors: 0.60     # price <= 60% of the median of the same route on other dates
+  # A new best itinerary at least this much cheaper than the previous best triggers an alert.
+  new_best_drop: 0.05
+  cooldown_hours: 24           # do not repeat the same alert within this period
+
+deals:
+  # RSS feeds of deal sites. Feeds that fail are skipped and logged.
+  feeds:
+    - https://www.melhoresdestinos.com.br/feed
+    - https://www.passageirodeprimeira.com/feed/
+    - https://passagensimperdiveis.com.br/feed/
+    - https://www.secretflying.com/posts/category/error-fare/feed/
+  # A post is relevant if it mentions at least one place AND at least one origin keyword.
+  place_keywords: [europa, europe, paris, roma, rome, barcelona, madri, madrid, lisboa, lisbon, milão, milan, italia, itália, frança, espanha, portugal]
+  origin_keywords: [são paulo, sao paulo, gru, guarulhos, campinas, viracopos, brasil, brazil]
+  boost_keywords: [erro, error fare, tarifa errada, imperdível, relâmpago, flash]

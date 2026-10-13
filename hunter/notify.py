@@ -15,7 +15,9 @@ import json
 import re
 import os
 import smtplib
+import time
 import urllib.parse
+import urllib.error
 import urllib.request
 from email.message import EmailMessage
 
@@ -66,20 +68,29 @@ def _whatsapp(text: str) -> bool:
     if len(text) > 1500:
         text = text[:1450] + "\n[...] full details in reports/latest.md"
     q = urllib.parse.urlencode({"phone": phone.replace(" ", ""), "text": text, "apikey": key})
-    try:
-        with urllib.request.urlopen(f"https://api.callmebot.com/whatsapp.php?{q}", timeout=30) as r:
-            body = r.read().decode("utf-8", "replace")
+    url = f"https://api.callmebot.com/whatsapp.php?{q}"
+    for attempt in range(2):
+        try:
+            with urllib.request.urlopen(url, timeout=30) as r:
+                status, body = r.status, r.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            # CallMeBot throttles bursts of messages (seen as HTTP 403); wait once and retry.
+            print(f"[notify] whatsapp HTTP {e.code} (attempt {attempt + 1})")
+            if attempt == 0:
+                time.sleep(30)
+                continue
+            return False
+        except Exception as e:
+            print(f"[notify] whatsapp failed: {e}")
+            return False
         low = body.lower()
-        # CallMeBot answers with a small HTML page. Failures start with "ERROR" (e.g. an invalid
-        # API key); a successful request echoes the recipient and the text and says it was queued.
-        failed = (r.status != 200 or body.lstrip().upper().startswith("ERROR")
+        # CallMeBot answers with a small HTML page (HTTP 200 or 203). Failures start with
+        # "ERROR" or say the API key is invalid; success says the message was queued.
+        failed = (not 200 <= status < 300 or body.lstrip().upper().startswith("ERROR")
                   or "apikey is invalid" in low or "invalid format" in low)
-        # Always log the reply (with the API key never included) so delivery problems can be diagnosed.
         print(f"[notify] whatsapp answered: {re.sub(r'<[^>]+>', ' ', body)[-400:]}")
         return not failed
-    except Exception as e:
-        print(f"[notify] whatsapp failed: {e}")
-        return False
+    return False
 
 
 def configured() -> list[str]:

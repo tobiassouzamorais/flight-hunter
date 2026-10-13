@@ -2,8 +2,8 @@ name: hunt
 
 on:
   schedule:
-    # Every 3 hours at minute 17 (UTC). Each run scrapes one shard of the grid.
-    - cron: "17 */3 * * *"
+    # Every hour at minute 17 (UTC). Each run scrapes one shard of the grid.
+    - cron: "17 * * * *"
   workflow_dispatch:
     inputs:
       shard:

@@ -48,7 +48,7 @@ internal_legs:
 search:
   # The grid is split into shards; each run scrapes one shard so the load on Google stays low.
   shards: 4
-  hours_per_shard: 3           # with the default cron (every 3 h) the whole grid refreshes every 12 h
+  hours_per_shard: 1           # with the default cron (hourly) the whole grid refreshes every 4 h
   delay_seconds: [2.5, 6.0]    # random pause between requests
   retries: 3
   # Same-airport round trips are priced too, only for these gateways and origins.

@@ -12,6 +12,7 @@ Without any of them, alerts are only printed and written to the report.
 from __future__ import annotations
 
 import json
+import re
 import os
 import smtplib
 import urllib.parse
@@ -73,8 +74,8 @@ def _whatsapp(text: str) -> bool:
         # API key); a successful request echoes the recipient and the text and says it was queued.
         failed = (r.status != 200 or body.lstrip().upper().startswith("ERROR")
                   or "apikey is invalid" in low or "invalid format" in low)
-        if failed:
-            print(f"[notify] whatsapp answered: {body[:600]}")
+        # Always log the reply (with the API key never included) so delivery problems can be diagnosed.
+        print(f"[notify] whatsapp answered: {re.sub(r'<[^>]+>', ' ', body)[-400:]}")
         return not failed
     except Exception as e:
         print(f"[notify] whatsapp failed: {e}")

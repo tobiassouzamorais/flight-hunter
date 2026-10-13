@@ -82,7 +82,7 @@ class Store:
 
     # quotes -----------------------------------------------------------------
 
-    def add_quotes(self, req, itineraries, ts: datetime, keep: int = 3) -> None:
+    def add_quotes(self, req, itineraries, ts: datetime, keep: int = 1) -> None:
         rows = []
         for rank, it in enumerate(itineraries[:keep]):
             rows.append((iso(ts), req.key(), req.kind, req.origin, req.dest,
@@ -94,6 +94,20 @@ class Store:
             "INSERT INTO quotes(ts,qkey,kind,origin,dest,date_out,date_ret,pax,rank,price,"
             "airlines,stops,duration_min,legs,url) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", rows)
         self.con.commit()
+
+    def prune(self, history_days: int, detail_days: int = 2) -> None:
+        """Keep the database small enough to live in git.
+
+        Quotes older than `history_days` are deleted. Quotes older than `detail_days` keep only
+        what the anomaly test needs (price and keys); their segment details and links are dropped.
+        """
+        now = utcnow()
+        self.con.execute("DELETE FROM quotes WHERE ts < ?", (iso(now - timedelta(days=history_days)),))
+        self.con.execute("UPDATE quotes SET legs = NULL, url = NULL WHERE ts < ? AND legs IS NOT NULL",
+                         (iso(now - timedelta(days=detail_days)),))
+        self.con.execute("DELETE FROM alerts WHERE ts < ?", (iso(now - timedelta(days=30)),))
+        self.con.commit()
+        self.con.execute("VACUUM")
 
     def latest_cheapest(self, since: datetime, pax: int) -> list[sqlite3.Row]:
         """Most recent rank-0 quote for every search key scraped since `since`."""

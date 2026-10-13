@@ -191,6 +191,7 @@ def main(argv=None):
             stats = run_sweep(cfg, store, shard, a.limit)
         deals = scan_feeds(cfg, store)
         analyze(cfg, store, stats, deals, do_bucket_check=not a.no_bucket_check)
+        store.prune(cfg.history_days)
     finally:
         store.close()
 

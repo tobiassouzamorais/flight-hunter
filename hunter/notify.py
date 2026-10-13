@@ -68,10 +68,14 @@ def _whatsapp(text: str) -> bool:
     try:
         with urllib.request.urlopen(f"https://api.callmebot.com/whatsapp.php?{q}", timeout=30) as r:
             body = r.read().decode("utf-8", "replace")
-        ok = r.status == 200 and "error" not in body.lower()
-        if not ok:
-            print(f"[notify] whatsapp answered: {body[:200]}")
-        return ok
+        low = body.lower()
+        # CallMeBot answers with a small HTML page. Failures start with "ERROR" (e.g. an invalid
+        # API key); a successful request echoes the recipient and the text and says it was queued.
+        failed = (r.status != 200 or body.lstrip().upper().startswith("ERROR")
+                  or "apikey is invalid" in low or "invalid format" in low)
+        if failed:
+            print(f"[notify] whatsapp answered: {body[:600]}")
+        return not failed
     except Exception as e:
         print(f"[notify] whatsapp failed: {e}")
         return False

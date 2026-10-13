@@ -27,6 +27,8 @@ from collections import defaultdict
 from datetime import date, datetime, timedelta
 from statistics import median
 
+from .links import fmt, leg_links
+
 
 def robust_drop(price: float, hist: list[float], ratio: float, z_min: float) -> tuple[bool, float, float]:
     """Return (flag, median, z)."""
@@ -78,11 +80,11 @@ def leg_anomalies(cfg, store, rows, now: datetime) -> list[tuple[str, str]]:
                 alerts.append((f"hist|{r['qkey']}|{r['price']}",
                                f"Price drop: {describe(r)} now {r['price']:,} {cfg.currency} "
                                f"for {r['pax']} pax, {pct:.0f}% below its {len(hist)}-sample median "
-                               f"({m:,.0f}), z={z:.1f}. {r['airlines']}\n{r['url']}"))
+                               f"({m:,.0f}), z={z:.1f}. {r['airlines']}\n{fmt(leg_links(r))}"))
     for r, m in neighbor_flags(rows, cfg.ratio_vs_neighbors):
         pct = 100 * (1 - r["price"] / m)
         alerts.append((f"nbr|{r['qkey']}|{r['price']}",
                        f"Outlier date: {describe(r)} at {r['price']:,} {cfg.currency} for {r['pax']} pax, "
                        f"{pct:.0f}% below the same route on other dates (median {m:,.0f}). "
-                       f"{r['airlines']}\n{r['url']}"))
+                       f"{r['airlines']}\n{fmt(leg_links(r))}"))
     return alerts

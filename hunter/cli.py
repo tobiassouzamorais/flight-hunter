@@ -20,6 +20,7 @@ from .combine import build_trips, diverse_top
 from .config import load_config
 from .db import Store, utcnow
 from .deals import scan_feeds
+from .links import fmt, trip_links
 from .report import money, render
 from .scraper import QuoteRequest, ScrapeError, fetch, polite_pause
 from .sweep import auto_shard, build_grid, run_sweep, shard_of
@@ -85,7 +86,8 @@ def analyze(cfg, store, stats=None, deals=(), do_bucket_check=False, report_path
         desc = (f"{best.label()}\nTotal {money(best.total)} {cfg.currency} for {cfg.passengers} "
                 f"({money(best.total / cfg.passengers)} per person), of which flights "
                 f"{money(best.flights_total)} and internal legs estimate {money(best.internal_total)}.\n"
-                f"Airlines: {best.airlines_out} / {best.airlines_ret}\n" + "\n".join(best.links))
+                f"Airlines: {best.airlines_out} / {best.airlines_ret}\n"
+                + fmt(trip_links(best, cfg.passengers, cfg.currency, cfg.language)))
         prev = store.previous_best()
         if prev is None or best.total < prev * (1 - cfg.new_best_drop):
             store.add_best(best.total, best.label())
@@ -103,7 +105,8 @@ def analyze(cfg, store, stats=None, deals=(), do_bucket_check=False, report_path
         msg = (f"Flights below {money(cfg.max_flights_total)} {cfg.currency}: {t.label()}\n"
                f"Flights {money(t.flights_total)} for {cfg.passengers} "
                f"({money(t.flights_total / cfg.passengers)} per person). "
-               f"Airlines: {t.airlines_out} / {t.airlines_ret}\n" + "\n".join(t.links))
+               f"Airlines: {t.airlines_out} / {t.airlines_ret}\n"
+               + fmt(trip_links(t, cfg.passengers, cfg.currency, cfg.language)))
         store.add_alert(akey, msg)
         messages.append(msg)
 
@@ -163,10 +166,22 @@ def main(argv=None):
         return
 
     if a.command == "test-alert":
-        ok = notify.send("Flight Hunter: test alert",
-                         "This is a test message from your Flight Hunter agent. If you are reading it, "
-                         f"this alert channel works. You will be alerted when international flights for "
-                         f"{cfg.passengers} people cost less than {money(cfg.max_flights_total)} {cfg.currency}.")
+        text = ("This is a test message from your Flight Hunter agent. If you are reading it, "
+                f"this alert channel works. You will be alerted when international flights for "
+                f"{cfg.passengers} people cost less than {money(cfg.max_flights_total)} {cfg.currency}.")
+        if Path(a.db).exists():
+            st = Store(a.db)
+            rows = st.latest_cheapest(utcnow() - timedelta(hours=cfg.freshness_hours), cfg.passengers)
+            trips = build_trips(cfg, rows)
+            st.close()
+            if trips:
+                t = min(trips, key=lambda x: x.flights_total)
+                text += (f"\n\nCheapest trip right now (example of a real alert): {t.label()}\n"
+                         f"Flights {money(t.flights_total)} {cfg.currency} for {cfg.passengers} "
+                         f"({money(t.flights_total / cfg.passengers)} per person). "
+                         f"Airlines: {t.airlines_out} / {t.airlines_ret}\n"
+                         + fmt(trip_links(t, cfg.passengers, cfg.currency, cfg.language)))
+        ok = notify.send("Flight Hunter: test alert", text)
         raise SystemExit(0 if ok else 1)
 
     store = Store(a.db)

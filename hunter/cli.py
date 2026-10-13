@@ -79,7 +79,7 @@ def analyze(cfg, store, stats=None, deals=(), do_bucket_check=False, report_path
             store.add_alert(akey, msg)
             messages.append(msg)
 
-    # 2) best complete trip: below target, or a meaningful new best
+    # 2) a meaningful new best complete trip (flights + internal estimate)
     if top:
         best = top[0]
         desc = (f"{best.label()}\nTotal {money(best.total)} {cfg.currency} for {cfg.passengers} "
@@ -92,10 +92,20 @@ def analyze(cfg, store, stats=None, deals=(), do_bucket_check=False, report_path
             if prev is not None:
                 messages.append(f"New best trip ({100 * (1 - best.total / prev):.0f}% below previous "
                                 f"best {money(prev)}):\n{desc}")
-        akey = f"target|{best.label()}|{int(best.total)}"
-        if best.total <= cfg.target_total and not store.recently_alerted(akey, cfg.cooldown_hours):
-            store.add_alert(akey, desc)
-            messages.append(f"Below your target of {money(cfg.target_total)}:\n{desc}")
+
+    # 2b) any trip whose international flights cost less than the user's threshold
+    cheap = sorted((t for t in trips if t.flights_total < cfg.max_flights_total),
+                   key=lambda t: t.flights_total)[:5]
+    for t in cheap:
+        akey = f"threshold|{t.label()}|{int(t.flights_total)}"
+        if store.recently_alerted(akey, cfg.cooldown_hours):
+            continue
+        msg = (f"Flights below {money(cfg.max_flights_total)} {cfg.currency}: {t.label()}\n"
+               f"Flights {money(t.flights_total)} for {cfg.passengers} "
+               f"({money(t.flights_total / cfg.passengers)} per person). "
+               f"Airlines: {t.airlines_out} / {t.airlines_ret}\n" + "\n".join(t.links))
+        store.add_alert(akey, msg)
+        messages.append(msg)
 
     # 3) deals
     for d in deals:
@@ -136,7 +146,7 @@ def analyze(cfg, store, stats=None, deals=(), do_bucket_check=False, report_path
 
 def main(argv=None):
     p = argparse.ArgumentParser(prog="hunter")
-    p.add_argument("command", choices=["run", "analyze", "deals", "grid"])
+    p.add_argument("command", choices=["run", "analyze", "deals", "grid", "test-alert"])
     p.add_argument("--config", default="config.yaml")
     p.add_argument("--db", default="data/hunter.sqlite")
     p.add_argument("--shard", default="auto", help="auto, all, or a shard number")
@@ -151,6 +161,13 @@ def main(argv=None):
         c = Counter(shard_of(r, cfg.shards) for r in grid)
         print(f"total searches: {len(grid)}; per shard: {dict(sorted(c.items()))}")
         return
+
+    if a.command == "test-alert":
+        ok = notify.send("Flight Hunter: test alert",
+                         "This is a test message from your Flight Hunter agent. If you are reading it, "
+                         f"this alert channel works. You will be alerted when international flights for "
+                         f"{cfg.passengers} people cost less than {money(cfg.max_flights_total)} {cfg.currency}.")
+        raise SystemExit(0 if ok else 1)
 
     store = Store(a.db)
     try:

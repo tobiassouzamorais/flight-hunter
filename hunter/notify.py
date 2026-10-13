@@ -3,6 +3,9 @@
 Environment variables:
   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
   SMTP_HOST, SMTP_PORT (default 587), SMTP_USER, SMTP_PASS, ALERT_EMAIL_TO
+  WHATSAPP_PHONE (with country code, e.g. +5534...), CALLMEBOT_APIKEY
+WhatsApp goes through CallMeBot, a free third-party service for personal use: you activate it
+from your own phone and it can only message the number that activated it.
 Without any of them, alerts are only printed and written to the report.
 """
 
@@ -53,8 +56,44 @@ def _email(subject: str, text: str) -> bool:
         return False
 
 
-def send(subject: str, text: str) -> None:
+def _whatsapp(text: str) -> bool:
+    phone, key = os.getenv("WHATSAPP_PHONE"), os.getenv("CALLMEBOT_APIKEY")
+    if not (phone and key):
+        return False
+    # Keep messages short: CallMeBot passes the text in the URL, so long alerts are trimmed
+    # and the full version goes by e-mail/Telegram and the report.
+    if len(text) > 1500:
+        text = text[:1450] + "\n[...] full details in reports/latest.md"
+    q = urllib.parse.urlencode({"phone": phone.replace(" ", ""), "text": text, "apikey": key})
+    try:
+        with urllib.request.urlopen(f"https://api.callmebot.com/whatsapp.php?{q}", timeout=30) as r:
+            body = r.read().decode("utf-8", "replace")
+        ok = r.status == 200 and "error" not in body.lower()
+        if not ok:
+            print(f"[notify] whatsapp answered: {body[:200]}")
+        return ok
+    except Exception as e:
+        print(f"[notify] whatsapp failed: {e}")
+        return False
+
+
+def configured() -> list[str]:
+    ch = []
+    if os.getenv("TELEGRAM_BOT_TOKEN") and os.getenv("TELEGRAM_CHAT_ID"):
+        ch.append("telegram")
+    if all(os.getenv(k) for k in ("SMTP_HOST", "SMTP_USER", "SMTP_PASS", "ALERT_EMAIL_TO")):
+        ch.append("email")
+    if os.getenv("WHATSAPP_PHONE") and os.getenv("CALLMEBOT_APIKEY"):
+        ch.append("whatsapp")
+    return ch
+
+
+def send(subject: str, text: str) -> bool:
+    """Send through every configured channel. Returns True if at least one delivered."""
     print(f"\n===== {subject} =====\n{text}\n")
+    print(f"[notify] configured channels: {', '.join(configured()) or 'none'}")
     sent = [name for name, ok in (("telegram", _telegram(f"{subject}\n\n{text}")),
-                                  ("email", _email(subject, text))) if ok]
+                                  ("email", _email(subject, text)),
+                                  ("whatsapp", _whatsapp(f"*{subject}*\n\n{text}"))) if ok]
     print(f"[notify] delivered via: {', '.join(sent) or 'console only'}")
+    return bool(sent)

@@ -9,6 +9,10 @@ on:
       shard:
         description: "auto, all, or a shard number"
         default: "auto"
+      test_alert:
+        description: "Only send a test alert to every configured channel"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -33,7 +37,8 @@ jobs:
 
       - run: python -m pytest -q
 
-      - name: Scrape, scan deals, analyze, alert
+      - name: Test alert
+        if: ${{ github.event.inputs.test_alert == 'true' }}
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -42,6 +47,22 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
+          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+        run: python -m hunter test-alert
+
+      - name: Scrape, scan deals, analyze, alert
+        if: ${{ github.event.inputs.test_alert != 'true' }}
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
+          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: python -m hunter run --shard "${{ github.event.inputs.shard || 'auto' }}"
 
       - name: Save price history and report

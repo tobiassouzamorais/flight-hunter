@@ -38,7 +38,7 @@ class Config:
     freshness_hours: float
     stop_after: date
 
-    target_total: float
+    max_flights_total: float
     history_days: int
     min_history: int
     ratio_vs_history: float
@@ -112,7 +112,7 @@ def load_config(path: str | Path = "config.yaml") -> Config:
         roundtrip_origins=[o.upper() for o in s.get("roundtrip_origins", [])],
         freshness_hours=float(s.get("freshness_hours", 36)),
         stop_after=_as_date(s.get("stop_after", "2099-01-01")),
-        target_total=float(a["target_total"]),
+        max_flights_total=float(a.get("max_flights_total", a.get("target_total", 0))),
         history_days=int(a.get("history_days", 14)),
         min_history=int(a.get("min_history", 4)),
         ratio_vs_history=float(a.get("ratio_vs_history", 0.7)),

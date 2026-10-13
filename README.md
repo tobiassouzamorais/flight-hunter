@@ -2,7 +2,7 @@
 
 Flight Hunter watches Google Flights and a few deal sites for cheap fares from São Paulo to Europe and back. It was built for one specific trip: three adults, leaving between January 18 and February 6, 2027, staying 14 to 16 days, visiting Barcelona, Paris and Rome, with the flights inside Europe bought separately. Everything about the trip lives in `config.yaml`, so the same code works for other trips.
 
-It runs for free on GitHub Actions, keeps a price history in a SQLite file inside the repository, and sends alerts to Telegram and/or e-mail.
+It runs for free on GitHub Actions, keeps a price history in a SQLite file inside the repository, and sends alerts to Telegram, e-mail and/or WhatsApp.
 
 ## How it searches
 
@@ -28,11 +28,11 @@ The agent also reads RSS feeds of deal sites and forwards new posts that mention
 
 ## Alerts
 
-You get one consolidated message per run when any of the following happens: a leg anomaly, a new best trip at least 5 percent cheaper than the previous best, the best trip falling below `alerts.target_total`, a relevant deal post, or more than half of the searches failing (which usually means Google is throttling the runner). The same alert is not repeated within 24 hours.
+You get one consolidated message per run when any of the following happens: a leg anomaly, a new best trip at least 5 percent cheaper than the previous best, any trip whose flights fall below `alerts.max_flights_total`, a relevant deal post, or more than half of the searches failing (which usually means Google is throttling the runner). The same alert is not repeated within 24 hours.
 
 There is also a fare class check. Airlines sell seats in fare classes with limited inventory, and a search for three passengers prices all three in the cheapest class that still has three seats. After each run the agent re-prices the legs of the three best trips for a single passenger. If three times the single price is clearly below the group price, it tells you that splitting the purchase into separate bookings on the same flights may save money.
 
-`target_total` ships with a placeholder of 12,000 BRL for three people including the internal-leg estimate. The first live test found the best combinations around 21,000 to 23,000 BRL on that basis, so the placeholder will rarely fire at first. Adjust it once you have a week or two of data and know what a good price looks like.
+The price alert fires when the international flights of a complete trip (outbound plus return, all three passengers together, internal-leg estimate not included) cost less than `alerts.max_flights_total`, currently 8,000 BRL. The first sweep found the cheapest combinations around 12,200 BRL for three, so this threshold will only fire on a real promotion or an error fare.
 
 ## Setup
 
@@ -40,8 +40,9 @@ You need a GitHub account. A public repository is recommended because GitHub Act
 
 1. Create a new repository and upload the contents of this folder, including the hidden `.github` folder.
 2. Set up at least one alert channel. For Telegram, talk to @BotFather in the Telegram app, create a bot and copy its token. Send any message to your new bot, then open `https://api.telegram.org/bot<TOKEN>/getUpdates` in a browser and copy the number in `"chat":{"id":...}`. For e-mail through Gmail, enable two-step verification on the account, create an app password at myaccount.google.com/apppasswords, and use `smtp.gmail.com`, port 587, your address as the user and the app password as the password.
-3. In the repository, open Settings, Secrets and variables, Actions, and add the secrets you need: `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`, and/or `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` and `ALERT_EMAIL_TO`.
-4. Open the Actions tab, enable workflows if GitHub asks, select "hunt" and click "Run workflow" once to test. The run summary shows the report, and `reports/latest.md` is updated in the repository after every run.
+   For WhatsApp, the free route is CallMeBot, a third-party service meant for personal use that can only message the number that activated it. Save +34 644 31 95 65 as a contact, send it the WhatsApp message "I allow callmebot to send me messages" and wait for the reply with your API key. If no key arrives within two minutes, CallMeBot asks you to retry after 24 hours. Its messages pass through CallMeBot's servers, so only flight prices and links are sent that way.
+3. In the repository, open Settings, Secrets and variables, Actions, and add the secrets you need: `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`, and/or `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` and `ALERT_EMAIL_TO`, and/or `WHATSAPP_PHONE` (with country code, for example +5534...) and `CALLMEBOT_APIKEY`.
+4. Open the Actions tab, enable workflows if GitHub asks, select "hunt", click "Run workflow", tick "Only send a test alert" and run it to check every channel; then run it once more without the box ticked to test a real sweep. The run summary shows the report, and `reports/latest.md` is updated in the repository after every run.
 
 From then on it runs by itself every three hours. GitHub disables scheduled workflows after 60 days without repository activity, but the commits each run makes count as activity. Scraping stops automatically after `search.stop_after` (January 10, 2027 by default).
 

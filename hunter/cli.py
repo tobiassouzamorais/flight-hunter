@@ -202,7 +202,7 @@ def main(argv=None):
         if utcnow().date() > cfg.stop_after:
             print(f"[run] stop_after ({cfg.stop_after}) has passed; not scraping")
         else:
-            shard = None if a.shard == "all" else (auto_shard(cfg) if a.shard == "auto" else int(a.shard))
+            shard = None if a.shard == "all" else (auto_shard(cfg, store) if a.shard == "auto" else int(a.shard))
             stats = run_sweep(cfg, store, shard, a.limit)
         deals = scan_feeds(cfg, store)
         analyze(cfg, store, stats, deals, do_bucket_check=not a.no_bucket_check)

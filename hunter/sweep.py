@@ -34,8 +34,19 @@ def shard_of(req: QuoteRequest, shards: int) -> int:
     return zlib.crc32(req.key().encode()) % shards
 
 
-def auto_shard(cfg: Config) -> int:
-    """Rotate through shards with wall-clock time so consecutive runs cover different shards."""
+def auto_shard(cfg: Config, store: Store | None = None) -> int:
+    """Pick the shard whose data is oldest.
+
+    GitHub delays and drops scheduled runs, so rotating by wall-clock hour can scrape the same
+    shard twice and skip others. Choosing the least recently scraped shard keeps coverage even.
+    """
+    if store is not None:
+        last = {r[0]: r[1] for r in store.con.execute(
+            "SELECT shard, MAX(ts) FROM runs WHERE shard IS NOT NULL GROUP BY shard")}
+        never = [s for s in range(cfg.shards) if s not in last]
+        if never:
+            return never[0]
+        return min(last, key=lambda s: last[s])
     return int(time.time() // (3600 * cfg.hours_per_shard)) % cfg.shards
 
 

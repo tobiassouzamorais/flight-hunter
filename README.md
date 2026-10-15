@@ -1,6 +1,6 @@
 # Flight Hunter
 
-Flight Hunter watches Google Flights and a few deal sites for cheap fares from São Paulo to Europe and back. It was built for one specific trip: three adults, leaving between January 18 and February 6, 2027, staying 14 to 16 days, visiting Barcelona, Paris and Rome, with the flights inside Europe bought separately. Everything about the trip lives in `config.yaml`, so the same code works for other trips.
+Flight Hunter watches Google Flights and a few deal sites for cheap fares from São Paulo to Europe and back. It was built for one specific trip: three adults, leaving between January 2 and February 15, 2027, staying 14 to 16 days, visiting Barcelona, Paris and Rome, with the flights inside Europe bought separately. Everything about the trip lives in `config.yaml`, so the same code works for other trips.
 
 It runs for free on GitHub Actions, keeps a price history in a SQLite file inside the repository, and sends alerts to Telegram, e-mail and/or WhatsApp.
 
@@ -8,7 +8,7 @@ It runs for free on GitHub Actions, keeps a price history in a SQLite file insid
 
 Entering Europe through one city and leaving through another (an open-jaw trip) is often the cheapest way to cover three cities, so the agent does not assume a round trip. The search space is every Brazilian origin, every European gateway in the config, every outbound date in the window and every stay length. Pricing all of those combinations directly would mean thousands of searches per sweep, which is neither polite nor necessary, so the work is split in two levels.
 
-The scraper only prices single legs: one-way flights from Brazil to each gateway on each outbound date, one-way flights from each gateway back to Brazil on each possible return date, and same-airport round trips for a short list of gateways. With the default config that is 888 searches. They are spread over four shards, and each scheduled run scrapes one shard, so with the hourly schedule the whole grid is refreshed every four hours, with roughly 220 searches per run and a random pause of a few seconds between requests.
+The scraper only prices single legs: one-way flights from Brazil to each gateway on each outbound date, one-way flights from each gateway back to Brazil on each possible return date, and same-airport round trips for a short list of gateways. With the default config that is about 1,960 searches. They are spread over four shards, and each scheduled run scrapes one shard, so with the hourly schedule the whole grid is refreshed every four hours, with roughly 490 searches per run and a random pause of a few seconds between requests.
 
 The combination step then assembles every valid trip from the stored legs: any outbound one-way paired with any return one-way whose date gives a stay inside the allowed range, plus the round trips. Each trip is charged an estimate of the intra-Europe flights it implies. The estimate is the cheapest ordering of the cities you must visit between the entry city and the exit city, with each leg costing a configurable amount per person. Entering at Paris and leaving from Rome needs two internal legs (Paris, Barcelona, Rome). A round trip to Paris needs three because you have to come back. Entering at Lisbon needs an extra leg because Lisbon is not on the list. This number is deliberately crude; its only job is to stop the ranking from favoring a cheap entry point that costs more later. Calibrate `internal_legs.default_cost_per_person` once you have real quotes, or set per-pair prices.
 
@@ -44,7 +44,7 @@ You need a GitHub account. A public repository is recommended because GitHub Act
 3. In the repository, open Settings, Secrets and variables, Actions, and add the secrets you need: `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`, and/or `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` and `ALERT_EMAIL_TO`, and/or `WHATSAPP_PHONE` (with country code, for example +5534...) and `CALLMEBOT_APIKEY`.
 4. Open the Actions tab, enable workflows if GitHub asks, select "hunt", click "Run workflow", tick "Only send a test alert" and run it to check every channel; then run it once more without the box ticked to test a real sweep. The run summary shows the report, and `reports/latest.md` is updated in the repository after every run.
 
-From then on it runs by itself every hour. GitHub disables scheduled workflows after 60 days without repository activity, but the commits each run makes count as activity. Scraping stops automatically after `search.stop_after` (January 10, 2027 by default).
+From then on it runs by itself every hour. GitHub disables scheduled workflows after 60 days without repository activity, but the commits each run makes count as activity. Scraping stops automatically after `search.stop_after` (February 8, 2027 by default); departure dates that are already past are skipped automatically.
 
 ## Running locally
 

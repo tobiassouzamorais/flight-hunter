@@ -26,8 +26,8 @@ trip:
   must_visit: [Barcelona, Paris, Rome]
 
   # Outbound departure window (inclusive) and length of stay in days (inclusive).
-  outbound_from: 2027-01-18
-  outbound_to: 2027-02-06
+  outbound_from: 2027-01-02
+  outbound_to: 2027-02-15
   stay_min_days: 14
   stay_max_days: 16
 
@@ -57,7 +57,7 @@ search:
   # How old a quote may be and still be used when combining legs.
   freshness_hours: 36
   # Stop scraping after this date (you will have bought by then).
-  stop_after: 2027-01-10
+  stop_after: 2027-02-08
 
 alerts:
   # Alert whenever a complete trip's INTERNATIONAL flights (outbound + return, all passengers

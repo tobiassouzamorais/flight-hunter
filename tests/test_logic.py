@@ -71,4 +71,5 @@ def test_grid_and_shards_cover_everything_once():
     keys = [r.key() for r in grid]
     assert len(keys) == len(set(keys))
     assert sum(1 for r in grid if shard_of(r, CFG.shards) in range(CFG.shards)) == len(grid)
-    assert min(CFG.return_dates()) == date(2027, 2, 1)
+    assert min(CFG.return_dates()) == date(2027, 1, 16)
+    assert not [r for r in build_grid(CFG, today=date(2027, 1, 20)) if r.date_out < date(2027, 1, 22)]

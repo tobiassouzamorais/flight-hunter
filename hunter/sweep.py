@@ -11,20 +11,22 @@ from .db import Store, utcnow
 from .scraper import QuoteRequest, ScrapeError, fetch, polite_pause
 
 
-def build_grid(cfg: Config) -> list[QuoteRequest]:
+def build_grid(cfg: Config, today=None) -> list[QuoteRequest]:
     reqs: list[QuoteRequest] = []
     pax = cfg.passengers
+    # Dates already in the past (or tomorrow, too late to buy) are not searched.
+    first = (today or utcnow().date()) + timedelta(days=2)
     for o in cfg.origins:
         for g in cfg.gateways:
-            for d in cfg.outbound_dates():
+            for d in [x for x in cfg.outbound_dates() if x >= first]:
                 reqs.append(QuoteRequest("ow", o, g, d, None, pax))
     for g in cfg.gateways:
         for h in cfg.origins:
-            for d in cfg.return_dates():
+            for d in [x for x in cfg.return_dates() if x >= first]:
                 reqs.append(QuoteRequest("ow", g, h, d, None, pax))
     for o in cfg.roundtrip_origins:
         for g in cfg.roundtrip_gateways:
-            for d in cfg.outbound_dates():
+            for d in [x for x in cfg.outbound_dates() if x >= first]:
                 for s in cfg.stays():
                     reqs.append(QuoteRequest("rt", o, g, d, d + timedelta(days=s), pax))
     return reqs

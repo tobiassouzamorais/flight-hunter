@@ -28,7 +28,7 @@ The agent also reads RSS feeds of deal sites and forwards new posts that mention
 
 ## Alerts
 
-You get one consolidated message per run when any of the following happens: a leg anomaly, a new best trip at least 5 percent cheaper than the previous best, any trip whose flights fall below `alerts.max_flights_total`, a relevant deal post, or more than half of the searches failing (which usually means Google is throttling the runner). The same alert is not repeated within 24 hours.
+You get one consolidated message per run when any of the following happens: an anomalously cheap round-trip ticket (one-way anomalies are only listed in the report, since an alert always describes a complete trip with both directions), a new best trip at least 5 percent cheaper than the previous best, any trip whose flights fall below `alerts.max_flights_total`, a relevant deal post, or more than half of the searches failing (which usually means Google is throttling the runner). The same alert is not repeated within 24 hours.
 
 There is also a fare class check. Airlines sell seats in fare classes with limited inventory, and a search for three passengers prices all three in the cheapest class that still has three seats. After each run the agent re-prices the legs of the three best trips for a single passenger. If three times the single price is clearly below the group price, it tells you that splitting the purchase into separate bookings on the same flights may save money.
 

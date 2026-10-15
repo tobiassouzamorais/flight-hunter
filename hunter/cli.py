@@ -76,6 +76,11 @@ def analyze(cfg, store, stats=None, deals=(), do_bucket_check=False, report_path
     anomalies = []
     for akey, msg in leg_anomalies(cfg, store, fresh, now):
         anomalies.append(msg)
+        # Only round-trip quotes are complete trips. A cheap one-way leg is listed in the report
+        # but not sent: if it really makes a whole trip cheaper, the "new best trip" and
+        # threshold alerts below fire with both directions priced together.
+        if akey.split("|")[1] != "rt":
+            continue
         if not store.recently_alerted(akey, cfg.cooldown_hours):
             store.add_alert(akey, msg)
             messages.append(msg)

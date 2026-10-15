@@ -1,10 +1,10 @@
 # Flight Hunter report
 
-Generated 2026-10-15 06:16 UTC. Trip: 3 adults from GRU, VCP, outbound 18/01/2027 to 06/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
+Generated 2026-10-15 12:00 UTC. Trip: 3 adults from GRU, VCP, outbound 18/01/2027 to 06/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
 
-Last sweep: 212 searches, 195 with results, 12 empty, 5 failed.
+Last sweep: 240 searches, 128 with results, 110 empty, 2 failed.
 
-Fresh leg quotes in the database: 734. Complete trips evaluated: 8171.
+Fresh leg quotes in the database: 792. Complete trips evaluated: 9791.
 
 ## Best trips
 
@@ -26,15 +26,15 @@ The internal column is an estimate of the intra-Europe flights you will buy late
 | 12 | GRU to CDG Sun 31/01 | BCN to GRU Tue 16/02 | 16d | 17.789 | 2.700 | **20.489** | 6.830 | United / ITA | 1/1 | 28h30 / 29h50 | Paris > Rome > Barcelona | [out](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMzEoAmoFEgNHUlVyBRIDQ0RHQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [back](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTYoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [open-jaw](https://www.google.com/travel/flights/search?tfs=GhoSCjIwMjctMDEtMzFqBRIDR1JVcgUSA0NERxoaEgoyMDI3LTAyLTE2agUSA0JDTnIFEgNHUlVCAwEBAUgBmAED&hl=en-US&curr=BRL) |
 | 13 | GRU to MAD Tue 02/02 | BCN to GRU Tue 16/02 | 14d | 16.467 | 4.050 | **20.517** | 6.839 | Aeromexico / ITA | 1/1 | 23h40 / 29h50 | Madrid > Paris > Rome > Barcelona | [out](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDIoAmoFEgNHUlVyBRIDTUFEQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [back](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTYoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [open-jaw](https://www.google.com/travel/flights/search?tfs=GhoSCjIwMjctMDItMDJqBRIDR1JVcgUSA01BRBoaEgoyMDI3LTAyLTE2agUSA0JDTnIFEgNHUlVCAwEBAUgBmAED&hl=en-US&curr=BRL) |
 | 14 | GRU to MAD Tue 02/02 | BCN to GRU Wed 17/02 | 15d | 16.467 | 4.050 | **20.517** | 6.839 | Aeromexico / ITA | 1/1 | 23h40 / 29h50 | Madrid > Paris > Rome > Barcelona | [out](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDIoAmoFEgNHUlVyBRIDTUFEQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [back](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTcoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [open-jaw](https://www.google.com/travel/flights/search?tfs=GhoSCjIwMjctMDItMDJqBRIDR1JVcgUSA01BRBoaEgoyMDI3LTAyLTE3agUSA0JDTnIFEgNHUlVCAwEBAUgBmAED&hl=en-US&curr=BRL) |
-| 15 | GRU to LIS Sat 06/02 | BCN to GRU Mon 22/02 | 16d | 16.800 | 4.050 | **20.850** | 6.950 | Gol, Tap Air Portugal / ITA | 1/1 | 18h45 / 29h50 | Lisbon > Paris > Rome > Barcelona | [out](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDYoAmoFEgNHUlVyBRIDTElTQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [back](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjIoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [open-jaw](https://www.google.com/travel/flights/search?tfs=GhoSCjIwMjctMDItMDZqBRIDR1JVcgUSA0xJUxoaEgoyMDI3LTAyLTIyagUSA0JDTnIFEgNHUlVCAwEBAUgBmAED&hl=en-US&curr=BRL) |
+| 15 | GRU to FCO Thu 04/02 | BCN to GRU Sat 20/02 | 16d | 17.880 | 2.700 | **20.580** | 6.860 | Tap Air Portugal / ITA | 1/1 | 15h30 / 29h50 | Rome > Paris > Barcelona | [out](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDQoAmoFEgNHUlVyBRIDRkNPQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [back](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjAoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [open-jaw](https://www.google.com/travel/flights/search?tfs=GhoSCjIwMjctMDItMDRqBRIDR1JVcgUSA0ZDTxoaEgoyMDI3LTAyLTIwagUSA0JDTnIFEgNHUlVCAwEBAUgBmAED&hl=en-US&curr=BRL) |
 
 All values in BRL.
 
 ## Fare class check (1 vs 3 passengers)
 
-- GRU->BCN 31/01 | BCN->GRU 15/02 (15d, round-trip): consistent (4.235 per person alone).
-- GRU->BCN 31/01 | BCN->GRU 16/02 (16d, round-trip): consistent (4.235 per person alone).
-- GRU->MAD 01/02 | MAD->GRU 15/02 (14d, round-trip): consistent (4.257 per person alone).
+- GRU->BCN 31/01 | BCN->GRU 15/02 (15d, round-trip): could not re-price for 1 passenger (no single-passenger result).
+- GRU->BCN 31/01 | BCN->GRU 16/02 (16d, round-trip): could not re-price for 1 passenger (no single-passenger result).
+- GRU->MAD 01/02 | MAD->GRU 15/02 (14d, round-trip): could not re-price for 1 passenger (no single-passenger result).
 
 ## Price anomalies in this run
 

@@ -1,8 +1,8 @@
 # Flight Hunter report
 
-Generated 2026-10-16 07:45 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
+Generated 2026-10-16 08:48 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
 
-Last sweep: 463 searches, 309 with results, 144 empty, 10 failed.
+Last sweep: 515 searches, 414 with results, 92 empty, 9 failed.
 
 Fresh leg quotes in the database: 1898. Complete trips evaluated: 24930.
 
@@ -12,8 +12,8 @@ The internal column is an estimate of the intra-Europe flights you will buy late
 
 | # | Out | Back | Stay | Flights (3 pax) | + internal est. | Total | Per person | Airlines out / back | Stops | Time out / back | Route in Europe | Links |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | GRU to FCO Tue 02/02 | FCO to GRU Thu 18/02 | 16d | 12.327 | 4.050 | **16.377** | 5.459 | Tap Air Portugal / (same ticket) | 1/- | 22h20 / ? | Rome > Barcelona > Paris > Rome | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDIoAmoFEgNHUlVyBRIDRkNPGhwSCjIwMjctMDItMTgoAmoFEgNGQ09yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
-| 2 | GRU to FCO Tue 02/02 | FCO to GRU Tue 16/02 | 14d | 12.352 | 4.050 | **16.402** | 5.467 | Tap Air Portugal / (same ticket) | 1/- | 22h20 / ? | Rome > Barcelona > Paris > Rome | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDIoAmoFEgNHUlVyBRIDRkNPGhwSCjIwMjctMDItMTYoAmoFEgNGQ09yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
+| 1 | GRU to FCO Tue 02/02 | FCO to GRU Tue 16/02 | 14d | 12.352 | 4.050 | **16.402** | 5.467 | Tap Air Portugal / (same ticket) | 1/- | 22h20 / ? | Rome > Barcelona > Paris > Rome | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDIoAmoFEgNHUlVyBRIDRkNPGhwSCjIwMjctMDItMTYoAmoFEgNGQ09yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
+| 2 | GRU to FCO Tue 02/02 | FCO to GRU Wed 17/02 | 15d | 12.352 | 4.050 | **16.402** | 5.467 | Tap Air Portugal / (same ticket) | 1/- | 22h20 / ? | Rome > Barcelona > Paris > Rome | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDIoAmoFEgNHUlVyBRIDRkNPGhwSCjIwMjctMDItMTcoAmoFEgNGQ09yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 3 | GRU to BCN Mon 08/02 | BCN to GRU Mon 22/02 | 14d | 12.425 | 4.050 | **16.475** | 5.492 | ITA / (same ticket) | 1/- | 27h30 / ? | Barcelona > Paris > Rome > Barcelona | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDgoAmoFEgNHUlVyBRIDQkNOGhwSCjIwMjctMDItMjIoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 4 | GRU to BCN Mon 08/02 | BCN to GRU Tue 23/02 | 15d | 12.425 | 4.050 | **16.475** | 5.492 | ITA / (same ticket) | 1/- | 27h30 / ? | Barcelona > Paris > Rome > Barcelona | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDgoAmoFEgNHUlVyBRIDQkNOGhwSCjIwMjctMDItMjMoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 5 | GRU to LIS Thu 11/02 | LIS to GRU Thu 25/02 | 14d | 12.322 | 5.400 | **17.722** | 5.907 | British Airways / (same ticket) | 1/- | 22h55 / ? | Lisbon > Barcelona > Paris > Rome > Lisbon | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTEoAmoFEgNHUlVyBRIDTElTGhwSCjIwMjctMDItMjUoAmoFEgNMSVNyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
@@ -32,8 +32,8 @@ All values in BRL.
 
 ## Fare class check (1 vs 3 passengers)
 
-- GRU->FCO 02/02 | FCO->GRU 18/02 (16d, round-trip): consistent (4.118 per person alone).
-- GRU->FCO 02/02 | FCO->GRU 16/02 (14d, round-trip): could not re-price for 1 passenger (no single-passenger result).
+- GRU->FCO 02/02 | FCO->GRU 16/02 (14d, round-trip): consistent (4.118 per person alone).
+- GRU->FCO 02/02 | FCO->GRU 17/02 (15d, round-trip): consistent (4.118 per person alone).
 - GRU->BCN 08/02 | BCN->GRU 22/02 (14d, round-trip): could not re-price for 1 passenger (no single-passenger result).
 
 ## Price anomalies in this run
@@ -43,11 +43,6 @@ Buy / check prices:
 - Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMjkoAmoFEgNWQ1ByBRIDQ0RHQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
 - Kayak: https://www.kayak.com.br/flights/VCP-CDG/2027-01-29/3adults?sort=price_a
 - Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/cdg/270129/?adultsv2=3&currency=BRL
-- Outlier date: one-way VCP->MAD 2027-02-09 at 8,620 BRL for 3 pax, 47% below the same route on other dates (median 16,136). Azul, Discover Airlines, Lufthansa
-Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDkoAmoFEgNWQ1ByBRIDTUFEQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/VCP-MAD/2027-02-09/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/mad/270209/?adultsv2=3&currency=BRL
 
 ## New deal posts
 

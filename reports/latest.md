@@ -1,10 +1,10 @@
 # Flight Hunter report
 
-Generated 2026-10-16 10:41 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
+Generated 2026-10-16 12:09 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
 
-Last sweep: 512 searches, 394 with results, 109 empty, 9 failed.
+Last sweep: 515 searches, 365 with results, 141 empty, 9 failed.
 
-Fresh leg quotes in the database: 1899. Complete trips evaluated: 24931.
+Fresh leg quotes in the database: 1905. Complete trips evaluated: 25055.
 
 ## Best trips
 
@@ -19,12 +19,12 @@ The internal column is an estimate of the intra-Europe flights you will buy late
 | 5 | GRU to LIS Thu 11/02 | LIS to GRU Thu 25/02 | 14d | 12.322 | 5.400 | **17.722** | 5.907 | British Airways / (same ticket) | 1/- | 22h55 / ? | Lisbon > Barcelona > Paris > Rome > Lisbon | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTEoAmoFEgNHUlVyBRIDTElTGhwSCjIwMjctMDItMjUoAmoFEgNMSVNyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 6 | GRU to MAD Mon 08/02 | MAD to GRU Mon 22/02 | 14d | 12.329 | 5.400 | **17.729** | 5.910 | Tap Air Portugal / (same ticket) | 1/- | 14h50 / ? | Madrid > Barcelona > Paris > Rome > Madrid | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDgoAmoFEgNHUlVyBRIDTUFEGhwSCjIwMjctMDItMjIoAmoFEgNNQURyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 7 | GRU to MAD Mon 08/02 | MAD to GRU Tue 23/02 | 15d | 12.329 | 5.400 | **17.729** | 5.910 | Tap Air Portugal / (same ticket) | 1/- | 14h50 / ? | Madrid > Barcelona > Paris > Rome > Madrid | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDgoAmoFEgNHUlVyBRIDTUFEGhwSCjIwMjctMDItMjMoAmoFEgNNQURyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
-| 8 | GRU to CDG Mon 15/02 | CDG to GRU Wed 03/03 | 16d | 13.901 | 4.050 | **17.951** | 5.984 | ITA / (same ticket) | 1/- | 21h40 / ? | Paris > Barcelona > Rome > Paris | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTUoAmoFEgNHUlVyBRIDQ0RHGhwSCjIwMjctMDMtMDMoAmoFEgNDREdyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
-| 9 | GRU to CDG Wed 10/02 | CDG to GRU Wed 24/02 | 14d | 13.931 | 4.050 | **17.981** | 5.994 | ITA / (same ticket) | 1/- | 21h40 / ? | Paris > Barcelona > Rome > Paris | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTAoAmoFEgNHUlVyBRIDQ0RHGhwSCjIwMjctMDItMjQoAmoFEgNDREdyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
+| 8 | GRU to CDG Wed 10/02 | CDG to GRU Wed 24/02 | 14d | 13.931 | 4.050 | **17.981** | 5.994 | ITA / (same ticket) | 1/- | 21h40 / ? | Paris > Barcelona > Rome > Paris | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTAoAmoFEgNHUlVyBRIDQ0RHGhwSCjIwMjctMDItMjQoAmoFEgNDREdyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
+| 9 | GRU to CDG Wed 10/02 | CDG to GRU Thu 25/02 | 15d | 13.931 | 4.050 | **17.981** | 5.994 | ITA / (same ticket) | 1/- | 21h40 / ? | Paris > Barcelona > Rome > Paris | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTAoAmoFEgNHUlVyBRIDQ0RHGhwSCjIwMjctMDItMjUoAmoFEgNDREdyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 10 | GRU to LIS Tue 09/02 | LIS to GRU Thu 25/02 | 16d | 12.753 | 5.400 | **18.153** | 6.051 | SWISS / (same ticket) | 1/- | 16h10 / ? | Lisbon > Barcelona > Paris > Rome > Lisbon | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDkoAmoFEgNHUlVyBRIDTElTGhwSCjIwMjctMDItMjUoAmoFEgNMSVNyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 11 | GRU to BCN Mon 15/02 | FCO to GRU Wed 03/03 | 16d | 16.851 | 2.700 | **19.551** | 6.517 | United / Iberia | 2/1 | 29h55 / 26h40 | Barcelona > Paris > Rome | [out](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTUoAmoFEgNHUlVyBRIDQkNOQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [back](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDMtMDMoAmoFEgNGQ09yBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [open-jaw](https://www.google.com/travel/flights/search?tfs=GhoSCjIwMjctMDItMTVqBRIDR1JVcgUSA0JDThoaEgoyMDI3LTAzLTAzagUSA0ZDT3IFEgNHUlVCAwEBAUgBmAED&hl=en-US&curr=BRL) |
-| 12 | GRU to CDG Wed 10/02 | BCN to GRU Wed 24/02 | 14d | 16.995 | 2.700 | **19.695** | 6.565 | United / ITA | 1/1 | 28h30 / 29h50 | Paris > Rome > Barcelona | [out](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTAoAmoFEgNHUlVyBRIDQ0RHQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [back](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjQoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [open-jaw](https://www.google.com/travel/flights/search?tfs=GhoSCjIwMjctMDItMTBqBRIDR1JVcgUSA0NERxoaEgoyMDI3LTAyLTI0agUSA0JDTnIFEgNHUlVCAwEBAUgBmAED&hl=en-US&curr=BRL) |
-| 13 | GRU to CDG Wed 10/02 | BCN to GRU Thu 25/02 | 15d | 16.995 | 2.700 | **19.695** | 6.565 | United / ITA | 1/1 | 28h30 / 29h50 | Paris > Rome > Barcelona | [out](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTAoAmoFEgNHUlVyBRIDQ0RHQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [back](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjUoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [open-jaw](https://www.google.com/travel/flights/search?tfs=GhoSCjIwMjctMDItMTBqBRIDR1JVcgUSA0NERxoaEgoyMDI3LTAyLTI1agUSA0JDTnIFEgNHUlVCAwEBAUgBmAED&hl=en-US&curr=BRL) |
+| 12 | GRU to CDG Thu 04/02 | BCN to GRU Sat 20/02 | 16d | 17.010 | 2.700 | **19.710** | 6.570 | United / ITA | 1/1 | 28h30 / 29h50 | Paris > Rome > Barcelona | [out](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDQoAmoFEgNHUlVyBRIDQ0RHQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [back](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjAoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [open-jaw](https://www.google.com/travel/flights/search?tfs=GhoSCjIwMjctMDItMDRqBRIDR1JVcgUSA0NERxoaEgoyMDI3LTAyLTIwagUSA0JDTnIFEgNHUlVCAwEBAUgBmAED&hl=en-US&curr=BRL) |
+| 13 | GRU to CDG Sun 07/02 | BCN to GRU Mon 22/02 | 15d | 17.010 | 2.700 | **19.710** | 6.570 | United / ITA | 1/1 | 28h30 / 29h50 | Paris > Rome > Barcelona | [out](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDcoAmoFEgNHUlVyBRIDQ0RHQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [back](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjIoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [open-jaw](https://www.google.com/travel/flights/search?tfs=GhoSCjIwMjctMDItMDdqBRIDR1JVcgUSA0NERxoaEgoyMDI3LTAyLTIyagUSA0JDTnIFEgNHUlVCAwEBAUgBmAED&hl=en-US&curr=BRL) |
 | 14 | GRU to BCN Tue 26/01 | ORY to GRU Wed 10/02 | 15d | 17.175 | 2.700 | **19.875** | 6.625 | Avianca / Tap Air Portugal | 1/1 | 25h35 / 27h20 | Barcelona > Rome > Paris | [out](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMjYoAmoFEgNHUlVyBRIDQkNOQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [back](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTAoAmoFEgNPUllyBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [open-jaw](https://www.google.com/travel/flights/search?tfs=GhoSCjIwMjctMDEtMjZqBRIDR1JVcgUSA0JDThoaEgoyMDI3LTAyLTEwagUSA09SWXIFEgNHUlVCAwEBAUgBmAED&hl=en-US&curr=BRL) |
 | 15 | GRU to BCN Tue 26/01 | ORY to GRU Thu 11/02 | 16d | 17.175 | 2.700 | **19.875** | 6.625 | Avianca / Tap Air Portugal | 1/1 | 25h35 / 19h30 | Barcelona > Rome > Paris | [out](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMjYoAmoFEgNHUlVyBRIDQkNOQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [back](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTEoAmoFEgNPUllyBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [open-jaw](https://www.google.com/travel/flights/search?tfs=GhoSCjIwMjctMDEtMjZqBRIDR1JVcgUSA0JDThoaEgoyMDI3LTAyLTExagUSA09SWXIFEgNHUlVCAwEBAUgBmAED&hl=en-US&curr=BRL) |
 
@@ -32,17 +32,17 @@ All values in BRL.
 
 ## Fare class check (1 vs 3 passengers)
 
-- GRU->FCO 02/02 | FCO->GRU 16/02 (14d, round-trip): consistent (4.118 per person alone).
+- GRU->FCO 02/02 | FCO->GRU 16/02 (14d, round-trip): could not re-price for 1 passenger (no single-passenger result).
 - GRU->FCO 02/02 | FCO->GRU 17/02 (15d, round-trip): consistent (4.118 per person alone).
-- GRU->BCN 08/02 | BCN->GRU 22/02 (14d, round-trip): consistent (4.150 per person alone).
+- GRU->BCN 08/02 | BCN->GRU 22/02 (14d, round-trip): could not re-price for 1 passenger (no single-passenger result).
 
 ## Price anomalies in this run
 
-- Price drop: one-way CDG->VCP 2027-02-05 now 29,182 BRL for 3 pax, 42% below its 5-sample median (50,150), z=282.9. Air France, Gol
+- Price drop: one-way VCP->CDG 2027-01-29 now 16,503 BRL for 3 pax, 31% below its 8-sample median (23,996), z=24.1. Gol, KLM, Air France
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDUoAmoFEgNDREdyBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/CDG-VCP/2027-02-05/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/cdg/vcp/270205/?adultsv2=3&currency=BRL
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMjkoAmoFEgNWQ1ByBRIDQ0RHQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/VCP-CDG/2027-01-29/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/cdg/270129/?adultsv2=3&currency=BRL
 
 ## New deal posts
 

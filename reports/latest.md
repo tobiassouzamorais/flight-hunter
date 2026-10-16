@@ -1,8 +1,8 @@
 # Flight Hunter report
 
-Generated 2026-10-16 08:48 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
+Generated 2026-10-16 09:39 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
 
-Last sweep: 515 searches, 414 with results, 92 empty, 9 failed.
+Last sweep: 473 searches, 282 with results, 189 empty, 2 failed.
 
 Fresh leg quotes in the database: 1898. Complete trips evaluated: 24930.
 
@@ -34,15 +34,15 @@ All values in BRL.
 
 - GRU->FCO 02/02 | FCO->GRU 16/02 (14d, round-trip): consistent (4.118 per person alone).
 - GRU->FCO 02/02 | FCO->GRU 17/02 (15d, round-trip): consistent (4.118 per person alone).
-- GRU->BCN 08/02 | BCN->GRU 22/02 (14d, round-trip): could not re-price for 1 passenger (no single-passenger result).
+- GRU->BCN 08/02 | BCN->GRU 22/02 (14d, round-trip): consistent (4.196 per person alone).
 
 ## Price anomalies in this run
 
-- Price drop: one-way VCP->CDG 2027-01-29 now 16,503 BRL for 3 pax, 31% below its 7-sample median (24,043), z=31.2. Gol, KLM, Air France
+- Price drop: one-way CDG->VCP 2027-02-05 now 29,182 BRL for 3 pax, 42% below its 5-sample median (50,150), z=282.9. Air France, Gol
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMjkoAmoFEgNWQ1ByBRIDQ0RHQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/VCP-CDG/2027-01-29/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/cdg/270129/?adultsv2=3&currency=BRL
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDUoAmoFEgNDREdyBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/CDG-VCP/2027-02-05/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/cdg/vcp/270205/?adultsv2=3&currency=BRL
 
 ## New deal posts
 

@@ -1,10 +1,10 @@
 # Flight Hunter report
 
-Generated 2026-10-16 01:45 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
+Generated 2026-10-16 02:41 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
 
-Last sweep: 515 searches, 322 with results, 187 empty, 6 failed.
+Last sweep: 473 searches, 324 with results, 145 empty, 4 failed.
 
-Fresh leg quotes in the database: 1847. Complete trips evaluated: 24071.
+Fresh leg quotes in the database: 1856. Complete trips evaluated: 24245.
 
 ## Best trips
 
@@ -15,8 +15,8 @@ The internal column is an estimate of the intra-Europe flights you will buy late
 | 1 | GRU to FCO Tue 02/02 | FCO to GRU Tue 16/02 | 14d | 12.327 | 4.050 | **16.377** | 5.459 | Tap Air Portugal / (same ticket) | 1/- | 22h20 / ? | Rome > Barcelona > Paris > Rome | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDIoAmoFEgNHUlVyBRIDRkNPGhwSCjIwMjctMDItMTYoAmoFEgNGQ09yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 2 | GRU to FCO Tue 02/02 | FCO to GRU Thu 18/02 | 16d | 12.327 | 4.050 | **16.377** | 5.459 | Tap Air Portugal / (same ticket) | 1/- | 22h20 / ? | Rome > Barcelona > Paris > Rome | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDIoAmoFEgNHUlVyBRIDRkNPGhwSCjIwMjctMDItMTgoAmoFEgNGQ09yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 3 | GRU to BCN Mon 08/02 | BCN to GRU Mon 22/02 | 14d | 12.425 | 4.050 | **16.475** | 5.492 | ITA / (same ticket) | 1/- | 27h30 / ? | Barcelona > Paris > Rome > Barcelona | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDgoAmoFEgNHUlVyBRIDQkNOGhwSCjIwMjctMDItMjIoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
-| 4 | GRU to BCN Mon 08/02 | BCN to GRU Wed 24/02 | 16d | 12.425 | 4.050 | **16.475** | 5.492 | ITA / (same ticket) | 1/- | 27h30 / ? | Barcelona > Paris > Rome > Barcelona | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDgoAmoFEgNHUlVyBRIDQkNOGhwSCjIwMjctMDItMjQoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
-| 5 | GRU to LIS Thu 11/02 | LIS to GRU Thu 25/02 | 14d | 12.311 | 5.400 | **17.711** | 5.904 | British Airways / (same ticket) | 1/- | 22h55 / ? | Lisbon > Barcelona > Paris > Rome > Lisbon | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTEoAmoFEgNHUlVyBRIDTElTGhwSCjIwMjctMDItMjUoAmoFEgNMSVNyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
+| 4 | GRU to BCN Mon 08/02 | BCN to GRU Tue 23/02 | 15d | 12.425 | 4.050 | **16.475** | 5.492 | ITA / (same ticket) | 1/- | 27h30 / ? | Barcelona > Paris > Rome > Barcelona | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDgoAmoFEgNHUlVyBRIDQkNOGhwSCjIwMjctMDItMjMoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
+| 5 | GRU to LIS Thu 11/02 | LIS to GRU Thu 25/02 | 14d | 12.296 | 5.400 | **17.696** | 5.899 | British Airways / (same ticket) | 1/- | 22h55 / ? | Lisbon > Barcelona > Paris > Rome > Lisbon | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTEoAmoFEgNHUlVyBRIDTElTGhwSCjIwMjctMDItMjUoAmoFEgNMSVNyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 6 | GRU to MAD Mon 08/02 | MAD to GRU Mon 22/02 | 14d | 12.329 | 5.400 | **17.729** | 5.910 | Tap Air Portugal / (same ticket) | 1/- | 14h50 / ? | Madrid > Barcelona > Paris > Rome > Madrid | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDgoAmoFEgNHUlVyBRIDTUFEGhwSCjIwMjctMDItMjIoAmoFEgNNQURyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 7 | GRU to MAD Mon 08/02 | MAD to GRU Tue 23/02 | 15d | 12.329 | 5.400 | **17.729** | 5.910 | Tap Air Portugal / (same ticket) | 1/- | 14h50 / ? | Madrid > Barcelona > Paris > Rome > Madrid | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDgoAmoFEgNHUlVyBRIDTUFEGhwSCjIwMjctMDItMjMoAmoFEgNNQURyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 8 | GRU to LIS Wed 10/02 | LIS to GRU Thu 25/02 | 15d | 12.342 | 5.400 | **17.742** | 5.914 | Lufthansa / (same ticket) | 1/- | 25h05 / ? | Lisbon > Barcelona > Paris > Rome > Lisbon | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTAoAmoFEgNHUlVyBRIDTElTGhwSCjIwMjctMDItMjUoAmoFEgNMSVNyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
@@ -34,25 +34,15 @@ All values in BRL.
 
 - GRU->FCO 02/02 | FCO->GRU 16/02 (14d, round-trip): consistent (4.109 per person alone).
 - GRU->FCO 02/02 | FCO->GRU 18/02 (16d, round-trip): consistent (4.109 per person alone).
-- GRU->BCN 08/02 | BCN->GRU 22/02 (14d, round-trip): consistent (4.235 per person alone).
+- GRU->BCN 08/02 | BCN->GRU 22/02 (14d, round-trip): could not re-price for 1 passenger (no single-passenger result).
 
 ## Price anomalies in this run
 
-- Outlier date: one-way VCP->LIS 2027-01-25 at 9,099 BRL for 3 pax, 40% below the same route on other dates (median 15,214). Gol
+- Outlier date: one-way VCP->MXP 2027-01-31 at 11,842 BRL for 3 pax, 41% below the same route on other dates (median 20,209). Azul, Discover Airlines, Air Dolomiti
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMjUoAmoFEgNWQ1ByBRIDTElTQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/VCP-LIS/2027-01-25/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/lis/270125/?adultsv2=3&currency=BRL
-- Outlier date: one-way VCP->LIS 2027-01-26 at 9,099 BRL for 3 pax, 40% below the same route on other dates (median 15,214). Gol
-Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMjYoAmoFEgNWQ1ByBRIDTElTQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/VCP-LIS/2027-01-26/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/lis/270126/?adultsv2=3&currency=BRL
-- Outlier date: one-way VCP->LIS 2027-02-01 at 9,099 BRL for 3 pax, 40% below the same route on other dates (median 15,214). Gol
-Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDEoAmoFEgNWQ1ByBRIDTElTQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/VCP-LIS/2027-02-01/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/lis/270201/?adultsv2=3&currency=BRL
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMzEoAmoFEgNWQ1ByBRIDTVhQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/VCP-MXP/2027-01-31/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/mxp/270131/?adultsv2=3&currency=BRL
 
 ## New deal posts
 

@@ -61,8 +61,8 @@ search:
 
 alerts:
   # Alert whenever a complete trip's INTERNATIONAL flights (outbound + return, all passengers
-  # together, internal-leg estimate NOT included) cost less than this. Set by Tobias: BRL 8,000.
-  max_flights_total: 8000
+  # together, internal-leg estimate NOT included) cost less than this. Set by Tobias: BRL 10,000.
+  max_flights_total: 10000
   # Leg-level anomaly detection (possible error fares).
   history_days: 14
   min_history: 4               # observations of the same quote needed before the time-series test runs

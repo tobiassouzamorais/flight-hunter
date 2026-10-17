@@ -32,7 +32,7 @@ You get one consolidated message per run when any of the following happens: an a
 
 There is also a fare class check. Airlines sell seats in fare classes with limited inventory, and a search for three passengers prices all three in the cheapest class that still has three seats. After each run the agent re-prices the legs of the three best trips for a single passenger. If three times the single price is clearly below the group price, it tells you that splitting the purchase into separate bookings on the same flights may save money.
 
-The price alert fires when the international flights of a complete trip (outbound plus return, all three passengers together, internal-leg estimate not included) cost less than `alerts.max_flights_total`, currently 8,000 BRL. The first sweep found the cheapest combinations around 12,200 BRL for three, so this threshold will only fire on a real promotion or an error fare.
+The price alert fires when the international flights of a complete trip (outbound plus return, all three passengers together, internal-leg estimate not included) cost less than `alerts.max_flights_total`, currently 10,000 BRL. The first sweep found the cheapest combinations around 12,200 BRL for three, so this threshold will only fire on a real promotion or an error fare.
 
 ## Setup
 

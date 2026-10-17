@@ -1,10 +1,10 @@
 # Flight Hunter report
 
-Generated 2026-10-17 14:57 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
+Generated 2026-10-17 16:31 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
 
-Last sweep: 515 searches, 310 with results, 199 empty, 6 failed.
+Last sweep: 512 searches, 377 with results, 125 empty, 10 failed.
 
-Fresh leg quotes in the database: 1910. Complete trips evaluated: 25055.
+Fresh leg quotes in the database: 1908. Complete trips evaluated: 25053.
 
 ## Best trips
 
@@ -33,21 +33,31 @@ All values in BRL.
 ## Fare class check (1 vs 3 passengers)
 
 - GRU->BCN 10/02 | BCN->GRU 24/02 (14d, round-trip): consistent (3.935 per person alone).
-- GRU->BCN 10/02 | BCN->GRU 25/02 (15d, round-trip): could not re-price for 1 passenger (no single-passenger result).
+- GRU->BCN 10/02 | BCN->GRU 25/02 (15d, round-trip): consistent (3.935 per person alone).
 - GRU->FCO 06/02 | FCO->GRU 20/02 (14d, round-trip): consistent (4.218 per person alone).
 
 ## Price anomalies in this run
 
-- Price drop: one-way MXP->VCP 2027-01-29 now 11,599 BRL for 3 pax, 83% below its 9-sample median (66,312), z=89.1. Tap Air Portugal, Azul
+- Price drop: one-way CDG->VCP 2027-01-27 now 18,769 BRL for 3 pax, 62% below its 11-sample median (49,941), z=109.5. Air France, Gol
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMjkoAmoFEgNNWFByBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/MXP-VCP/2027-01-29/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/mxp/vcp/270129/?adultsv2=3&currency=BRL
-- Price drop: one-way MXP->VCP 2027-01-30 now 13,609 BRL for 3 pax, 41% below its 9-sample median (23,060), z=3.7. Tap Air Portugal, Azul
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMjcoAmoFEgNDREdyBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/CDG-VCP/2027-01-27/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/cdg/vcp/270127/?adultsv2=3&currency=BRL
+- Price drop: one-way CDG->VCP 2027-02-19 now 27,247 BRL for 3 pax, 46% below its 13-sample median (50,008), z=108.1. Air France, KLM, Gol
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMzAoAmoFEgNNWFByBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/MXP-VCP/2027-01-30/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/mxp/vcp/270130/?adultsv2=3&currency=BRL
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTkoAmoFEgNDREdyBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/CDG-VCP/2027-02-19/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/cdg/vcp/270219/?adultsv2=3&currency=BRL
+- Price drop: one-way VCP->LIS 2027-01-30 now 9,166 BRL for 3 pax, 34% below its 10-sample median (13,859), z=150.7. Gol
+Buy / check prices:
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMzAoAmoFEgNWQ1ByBRIDTElTQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/VCP-LIS/2027-01-30/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/lis/270130/?adultsv2=3&currency=BRL
+- Outlier date: one-way VCP->MAD 2027-02-09 at 8,671 BRL for 3 pax, 42% below the same route on other dates (median 14,996). Azul, Discover Airlines, Lufthansa
+Buy / check prices:
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDkoAmoFEgNWQ1ByBRIDTUFEQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/VCP-MAD/2027-02-09/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/mad/270209/?adultsv2=3&currency=BRL
 
 ## New deal posts
 

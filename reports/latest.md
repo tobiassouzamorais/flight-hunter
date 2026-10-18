@@ -1,10 +1,10 @@
 # Flight Hunter report
 
-Generated 2026-10-18 06:42 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
+Generated 2026-10-18 08:22 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
 
-Last sweep: 463 searches, 371 with results, 85 empty, 7 failed.
+Last sweep: 473 searches, 445 with results, 11 empty, 17 failed.
 
-Fresh leg quotes in the database: 1907. Complete trips evaluated: 25076.
+Fresh leg quotes in the database: 1908. Complete trips evaluated: 25114.
 
 ## Best trips
 
@@ -16,10 +16,10 @@ The internal column is an estimate of the intra-Europe flights you will buy late
 | 2 | GRU to BCN Wed 10/02 | BCN to GRU Thu 25/02 | 15d | 11.805 | 4.050 | **15.855** | 5.285 | ITA / (same ticket) | 1/- | 27h30 / ? | Barcelona > Paris > Rome > Barcelona | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTAoAmoFEgNHUlVyBRIDQkNOGhwSCjIwMjctMDItMjUoAmoFEgNCQ05yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 3 | GRU to FCO Sat 06/02 | FCO to GRU Sat 20/02 | 14d | 12.654 | 4.050 | **16.704** | 5.568 | Tap Air Portugal / (same ticket) | 2/- | 21h50 / ? | Rome > Barcelona > Paris > Rome | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDYoAmoFEgNHUlVyBRIDRkNPGhwSCjIwMjctMDItMjAoAmoFEgNGQ09yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 4 | GRU to FCO Sat 06/02 | FCO to GRU Sun 21/02 | 15d | 12.654 | 4.050 | **16.704** | 5.568 | Tap Air Portugal / (same ticket) | 2/- | 21h50 / ? | Rome > Barcelona > Paris > Rome | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDYoAmoFEgNHUlVyBRIDRkNPGhwSCjIwMjctMDItMjEoAmoFEgNGQ09yBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
-| 5 | GRU to CDG Tue 09/02 | CDG to GRU Tue 23/02 | 14d | 12.824 | 4.050 | **16.874** | 5.625 | Avianca / (same ticket) | 1/- | 24h35 / ? | Paris > Barcelona > Rome > Paris | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDkoAmoFEgNHUlVyBRIDQ0RHGhwSCjIwMjctMDItMjMoAmoFEgNDREdyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
-| 6 | GRU to CDG Tue 09/02 | CDG to GRU Wed 24/02 | 15d | 12.824 | 4.050 | **16.874** | 5.625 | Avianca / (same ticket) | 1/- | 24h35 / ? | Paris > Barcelona > Rome > Paris | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDkoAmoFEgNHUlVyBRIDQ0RHGhwSCjIwMjctMDItMjQoAmoFEgNDREdyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
-| 7 | GRU to MAD Sun 14/02 | MAD to GRU Tue 02/03 | 16d | 11.662 | 5.400 | **17.062** | 5.687 | Royal Air Maroc / (same ticket) | 1/- | 13h40 / ? | Madrid > Barcelona > Paris > Rome > Madrid | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTQoAmoFEgNHUlVyBRIDTUFEGhwSCjIwMjctMDMtMDIoAmoFEgNNQURyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
-| 8 | GRU to MAD Thu 04/02 | MAD to GRU Sat 20/02 | 16d | 12.241 | 5.400 | **17.641** | 5.880 | Royal Air Maroc / (same ticket) | 1/- | 13h40 / ? | Madrid > Barcelona > Paris > Rome > Madrid | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDQoAmoFEgNHUlVyBRIDTUFEGhwSCjIwMjctMDItMjAoAmoFEgNNQURyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
+| 5 | GRU to CDG Tue 09/02 | CDG to GRU Wed 24/02 | 15d | 12.824 | 4.050 | **16.874** | 5.625 | Avianca / (same ticket) | 1/- | 24h35 / ? | Paris > Barcelona > Rome > Paris | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDkoAmoFEgNHUlVyBRIDQ0RHGhwSCjIwMjctMDItMjQoAmoFEgNDREdyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
+| 6 | GRU to CDG Tue 09/02 | CDG to GRU Thu 25/02 | 16d | 12.824 | 4.050 | **16.874** | 5.625 | Avianca / (same ticket) | 1/- | 24h35 / ? | Paris > Barcelona > Rome > Paris | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDkoAmoFEgNHUlVyBRIDQ0RHGhwSCjIwMjctMDItMjUoAmoFEgNDREdyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
+| 7 | GRU to MAD Sun 07/02 | MAD to GRU Mon 22/02 | 15d | 11.662 | 5.400 | **17.062** | 5.687 | Royal Air Maroc / (same ticket) | 1/- | 13h40 / ? | Madrid > Barcelona > Paris > Rome > Madrid | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDcoAmoFEgNHUlVyBRIDTUFEGhwSCjIwMjctMDItMjIoAmoFEgNNQURyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
+| 8 | GRU to MAD Sun 07/02 | MAD to GRU Tue 23/02 | 16d | 11.662 | 5.400 | **17.062** | 5.687 | Royal Air Maroc / (same ticket) | 1/- | 13h40 / ? | Madrid > Barcelona > Paris > Rome > Madrid | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDcoAmoFEgNHUlVyBRIDTUFEGhwSCjIwMjctMDItMjMoAmoFEgNNQURyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 9 | GRU to LIS Thu 11/02 | LIS to GRU Thu 25/02 | 14d | 12.515 | 5.400 | **17.915** | 5.972 | British Airways / (same ticket) | 1/- | 22h55 / ? | Lisbon > Barcelona > Paris > Rome > Lisbon | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTEoAmoFEgNHUlVyBRIDTElTGhwSCjIwMjctMDItMjUoAmoFEgNMSVNyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 10 | GRU to LIS Tue 09/02 | LIS to GRU Thu 25/02 | 16d | 12.828 | 5.400 | **18.228** | 6.076 | SWISS / (same ticket) | 1/- | 16h10 / ? | Lisbon > Barcelona > Paris > Rome > Lisbon | [round trip](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDkoAmoFEgNHUlVyBRIDTElTGhwSCjIwMjctMDItMjUoAmoFEgNMSVNyBRIDR1JVQgMBAQFIAYgBAZgBAQ==&hl=en-US&curr=BRL) |
 | 11 | GRU to BCN Mon 15/02 | FCO to GRU Wed 03/03 | 16d | 16.861 | 2.700 | **19.561** | 6.520 | United / Iberia | 2/1 | 29h55 / 26h40 | Barcelona > Paris > Rome | [out](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTUoAmoFEgNHUlVyBRIDQkNOQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [back](https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDMtMDMoAmoFEgNGQ09yBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=en-US&curr=BRL) [open-jaw](https://www.google.com/travel/flights/search?tfs=GhoSCjIwMjctMDItMTVqBRIDR1JVcgUSA0JDThoaEgoyMDI3LTAzLTAzagUSA0ZDT3IFEgNHUlVCAwEBAUgBmAED&hl=en-US&curr=BRL) |
@@ -38,41 +38,26 @@ All values in BRL.
 
 ## Price anomalies in this run
 
-- Outlier date: one-way GRU->MAD 2027-02-08 at 8,283 BRL for 3 pax, 44% below the same route on other dates (median 14,671). Aeromexico
+- Price drop: one-way CDG->VCP 2027-02-26 now 16,103 BRL for 3 pax, 68% below its 18-sample median (49,940), z=1086.8. Air France, Gol
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDgoAmoFEgNHUlVyBRIDTUFEQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/GRU-MAD/2027-02-08/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/gru/mad/270208/?adultsv2=3&currency=BRL
-- Outlier date: one-way GRU->MAD 2027-02-09 at 8,283 BRL for 3 pax, 44% below the same route on other dates (median 14,671). Aeromexico
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjYoAmoFEgNDREdyBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/CDG-VCP/2027-02-26/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/cdg/vcp/270226/?adultsv2=3&currency=BRL
+- Price drop: one-way CDG->VCP 2027-02-27 now 16,573 BRL for 3 pax, 67% below its 11-sample median (49,919), z=63.5. Air France, Air Europa, Azul
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDkoAmoFEgNHUlVyBRIDTUFEQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/GRU-MAD/2027-02-09/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/gru/mad/270209/?adultsv2=3&currency=BRL
-- Outlier date: one-way GRU->MAD 2027-02-10 at 8,283 BRL for 3 pax, 44% below the same route on other dates (median 14,671). Aeromexico
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjcoAmoFEgNDREdyBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/CDG-VCP/2027-02-27/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/cdg/vcp/270227/?adultsv2=3&currency=BRL
+- Price drop: one-way VCP->CDG 2027-01-02 now 31,290 BRL for 3 pax, 37% below its 12-sample median (49,352), z=304.6. Azul, Air Europa, Air France
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTAoAmoFEgNHUlVyBRIDTUFEQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/GRU-MAD/2027-02-10/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/gru/mad/270210/?adultsv2=3&currency=BRL
-- Outlier date: one-way GRU->MAD 2027-02-11 at 8,283 BRL for 3 pax, 44% below the same route on other dates (median 14,671). Aeromexico
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMDIoAmoFEgNWQ1ByBRIDQ0RHQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/VCP-CDG/2027-01-02/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/cdg/270102/?adultsv2=3&currency=BRL
+- Price drop: one-way VCP->LIS 2027-01-18 now 9,166 BRL for 3 pax, 39% below its 15-sample median (15,001), z=171.1. Gol
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTEoAmoFEgNHUlVyBRIDTUFEQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/GRU-MAD/2027-02-11/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/gru/mad/270211/?adultsv2=3&currency=BRL
-- Outlier date: one-way VCP->CDG 2027-01-30 at 13,252 BRL for 3 pax, 45% below the same route on other dates (median 24,059). Azul, Air Europa, Air France
-Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMzAoAmoFEgNWQ1ByBRIDQ0RHQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/VCP-CDG/2027-01-30/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/cdg/270130/?adultsv2=3&currency=BRL
-- Outlier date: one-way VCP->CDG 2027-02-09 at 13,252 BRL for 3 pax, 45% below the same route on other dates (median 24,059). Azul, Air Europa, Air France
-Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDkoAmoFEgNWQ1ByBRIDQ0RHQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/VCP-CDG/2027-02-09/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/cdg/270209/?adultsv2=3&currency=BRL
-- Outlier date: one-way VCP->FCO 2027-01-28 at 11,934 BRL for 3 pax, 42% below the same route on other dates (median 20,597). Azul, Discover Airlines, Lufthansa
-Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMjgoAmoFEgNWQ1ByBRIDRkNPQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/VCP-FCO/2027-01-28/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/fco/270128/?adultsv2=3&currency=BRL
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMTgoAmoFEgNWQ1ByBRIDTElTQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/VCP-LIS/2027-01-18/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/lis/270118/?adultsv2=3&currency=BRL
 
 ## New deal posts
 

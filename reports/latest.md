@@ -1,8 +1,8 @@
 # Flight Hunter report
 
-Generated 2026-10-18 01:45 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
+Generated 2026-10-18 03:20 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
 
-Last sweep: 473 searches, 328 with results, 137 empty, 8 failed.
+Last sweep: 463 searches, 321 with results, 130 empty, 12 failed.
 
 Fresh leg quotes in the database: 1907. Complete trips evaluated: 25036.
 
@@ -32,17 +32,22 @@ All values in BRL.
 
 ## Fare class check (1 vs 3 passengers)
 
-- GRU->BCN 10/02 | BCN->GRU 24/02 (14d, round-trip): could not re-price for 1 passenger (no single-passenger result).
+- GRU->BCN 10/02 | BCN->GRU 24/02 (14d, round-trip): consistent (3.935 per person alone).
 - GRU->BCN 10/02 | BCN->GRU 25/02 (15d, round-trip): consistent (3.935 per person alone).
 - GRU->FCO 02/02 | FCO->GRU 16/02 (14d, round-trip): consistent (4.142 per person alone).
 
 ## Price anomalies in this run
 
-- Price drop: one-way VCP->CDG 2027-01-02 now 31,290 BRL for 3 pax, 37% below its 11-sample median (49,392), z=152.6. Azul, Air Europa, Air France
+- Outlier date: one-way VCP->BCN 2027-01-28 at 11,934 BRL for 3 pax, 41% below the same route on other dates (median 20,168). Azul, Discover Airlines, Lufthansa
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMDIoAmoFEgNWQ1ByBRIDQ0RHQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/VCP-CDG/2027-01-02/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/cdg/270102/?adultsv2=3&currency=BRL
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMjgoAmoFEgNWQ1ByBRIDQkNOQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/VCP-BCN/2027-01-28/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/bcn/270128/?adultsv2=3&currency=BRL
+- Outlier date: one-way VCP->BCN 2027-01-29 at 11,934 BRL for 3 pax, 41% below the same route on other dates (median 20,168). Azul, Discover Airlines, Lufthansa
+Buy / check prices:
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMjkoAmoFEgNWQ1ByBRIDQkNOQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/VCP-BCN/2027-01-29/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/bcn/270129/?adultsv2=3&currency=BRL
 
 ## New deal posts
 

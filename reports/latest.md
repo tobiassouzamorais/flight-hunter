@@ -1,8 +1,8 @@
 # Flight Hunter report
 
-Generated 2026-10-24 16:53 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
+Generated 2026-10-24 18:39 UTC. Trip: 3 adults from GRU, VCP, outbound 02/01/2027 to 15/02/2027, stay 14 to 16 days, visiting Barcelona, Paris, Rome.
 
-Last sweep: 473 searches, 442 with results, 16 empty, 15 failed.
+Last sweep: 463 searches, 377 with results, 69 empty, 17 failed.
 
 Fresh leg quotes in the database: 1885. Complete trips evaluated: 25066.
 
@@ -38,41 +38,46 @@ All values in BRL.
 
 ## Price anomalies in this run
 
-- Price drop: one-way CDG->VCP 2027-02-19 now 26,986 BRL for 3 pax, 46% below its 56-sample median (49,670), z=61.4. Air France, KLM, Gol
+- Price drop: one-way FCO->VCP 2027-02-05 now 11,789 BRL for 3 pax, 59% below its 56-sample median (28,803), z=15.2. Tap Air Portugal, Azul
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTkoAmoFEgNDREdyBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/CDG-VCP/2027-02-19/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/cdg/vcp/270219/?adultsv2=3&currency=BRL
-- Price drop: one-way CDG->VCP 2027-02-20 now 16,201 BRL for 3 pax, 67% below its 53-sample median (49,473), z=28.1. Air France, Air Europa, Azul
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDUoAmoFEgNGQ09yBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/FCO-VCP/2027-02-05/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/fco/vcp/270205/?adultsv2=3&currency=BRL
+- Price drop: one-way LIS->GRU 2027-01-26 now 8,015 BRL for 3 pax, 36% below its 53-sample median (12,480), z=29.8. LATAM
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjAoAmoFEgNDREdyBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/CDG-VCP/2027-02-20/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/cdg/vcp/270220/?adultsv2=3&currency=BRL
-- Price drop: one-way FCO->GRU 2027-02-24 now 7,073 BRL for 3 pax, 31% below its 55-sample median (10,269), z=31.7. Iberia
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMjYoAmoFEgNMSVNyBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/LIS-GRU/2027-01-26/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/lis/gru/270126/?adultsv2=3&currency=BRL
+- Price drop: one-way LIS->GRU 2027-02-04 now 8,134 BRL for 3 pax, 32% below its 54-sample median (11,877), z=9.0. Royal Air Maroc
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjQoAmoFEgNGQ09yBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/FCO-GRU/2027-02-24/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/fco/gru/270224/?adultsv2=3&currency=BRL
-- Price drop: one-way LIS->GRU 2027-02-08 now 7,370 BRL for 3 pax, 39% below its 58-sample median (12,160), z=7.7. Gol
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDQoAmoFEgNMSVNyBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/LIS-GRU/2027-02-04/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/lis/gru/270204/?adultsv2=3&currency=BRL
+- Price drop: one-way LIS->GRU 2027-02-23 now 6,911 BRL for 3 pax, 30% below its 55-sample median (9,914), z=28.9. Iberia
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDgoAmoFEgNMSVNyBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/LIS-GRU/2027-02-08/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/lis/gru/270208/?adultsv2=3&currency=BRL
-- Price drop: one-way LIS->GRU 2027-02-13 now 7,370 BRL for 3 pax, 31% below its 55-sample median (10,675), z=6.4. Gol
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjMoAmoFEgNMSVNyBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/LIS-GRU/2027-02-23/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/lis/gru/270223/?adultsv2=3&currency=BRL
+- Price drop: one-way LIS->VCP 2027-01-30 now 9,375 BRL for 3 pax, 34% below its 56-sample median (14,227), z=29.2. LATAM
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTMoAmoFEgNMSVNyBRIDR1JVQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/LIS-GRU/2027-02-13/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/lis/gru/270213/?adultsv2=3&currency=BRL
-- Price drop: one-way MAD->VCP 2027-02-24 now 8,578 BRL for 3 pax, 30% below its 55-sample median (12,285), z=36.2. Lufthansa, Discover Airlines, Azul
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMzAoAmoFEgNMSVNyBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/LIS-VCP/2027-01-30/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/lis/vcp/270130/?adultsv2=3&currency=BRL
+- Price drop: one-way VCP->BCN 2027-01-15 now 17,316 BRL for 3 pax, 31% below its 57-sample median (25,178), z=24.2. Gol, Tap Air Portugal
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjQoAmoFEgNNQURyBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/MAD-VCP/2027-02-24/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/mad/vcp/270224/?adultsv2=3&currency=BRL
-- Price drop: one-way MXP->VCP 2027-02-01 now 16,430 BRL for 3 pax, 32% below its 59-sample median (24,279), z=31.9. Tap Air Portugal, LATAM
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMTUoAmoFEgNWQ1ByBRIDQkNOQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/VCP-BCN/2027-01-15/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/bcn/270115/?adultsv2=3&currency=BRL
+- Outlier date: one-way CDG->VCP 2027-03-03 at 10,117 BRL for 3 pax, 58% below the same route on other dates (median 23,947). Air France, Gol
 Buy / check prices:
-- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDEoAmoFEgNNWFByBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
-- Kayak: https://www.kayak.com.br/flights/MXP-VCP/2027-02-01/3adults?sort=price_a
-- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/mxp/vcp/270201/?adultsv2=3&currency=BRL
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDMtMDMoAmoFEgNDREdyBRIDVkNQQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/CDG-VCP/2027-03-03/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/cdg/vcp/270303/?adultsv2=3&currency=BRL
+- Outlier date: one-way VCP->CDG 2027-02-09 at 13,140 BRL for 3 pax, 44% below the same route on other dates (median 23,502). Azul, Air Europa, Air France
+Buy / check prices:
+- Google Flights: https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMDkoAmoFEgNWQ1ByBRIDQ0RHQgMBAQFIAYgBAZgBAg==&hl=pt-BR&curr=BRL
+- Kayak: https://www.kayak.com.br/flights/VCP-CDG/2027-02-09/3adults?sort=price_a
+- Skyscanner: https://www.skyscanner.com.br/transporte/passagens-aereas/vcp/cdg/270209/?adultsv2=3&currency=BRL
 
 ## New deal posts
 

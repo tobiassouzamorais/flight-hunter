@@ -47,10 +47,12 @@ class QuoteRequest:
     date_out: date
     date_ret: date | None
     pax: int
+    earliest_hour: int | None = None   # earliest local departure hour on date_out, if any
 
     def key(self) -> str:
         r = self.date_ret.isoformat() if self.date_ret else "-"
-        return f"{self.kind}|{self.origin}|{self.dest}|{self.date_out.isoformat()}|{r}|{self.pax}"
+        k = f"{self.kind}|{self.origin}|{self.dest}|{self.date_out.isoformat()}|{r}|{self.pax}"
+        return k + (f"|h{self.earliest_hour}" if self.earliest_hour is not None else "")
 
 
 @dataclass
@@ -70,7 +72,8 @@ class ScrapeError(RuntimeError):
 def build_query(req: QuoteRequest, currency: str, language: str, max_stops: int | None,
                 hide_self_transfer: bool = True):
     flights = [FlightQuery(date=req.date_out.isoformat(), from_airport=req.origin,
-                           to_airport=req.dest, max_stops=max_stops)]
+                           to_airport=req.dest, max_stops=max_stops,
+                           earliest_departure_hour=req.earliest_hour)]
     trip = "one-way"
     if req.kind == "rt":
         flights.append(FlightQuery(date=req.date_ret.isoformat(), from_airport=req.dest,

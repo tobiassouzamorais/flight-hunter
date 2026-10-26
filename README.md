@@ -4,6 +4,14 @@ Flight Hunter watches Google Flights and a few deal sites for cheap fares from S
 
 It runs for free on GitHub Actions, keeps a price history in a SQLite file inside the repository, and sends alerts to Telegram, e-mail and/or WhatsApp.
 
+## Current mode: flights inside Europe
+
+The long-haul tickets are bought (into Barcelona on February 9, 2027 at 08:15 and home from Barcelona on February 24 at 13:40), so `mode: internal` in `config.yaml` switches the agent to the three remaining flights: Barcelona to the first city, first city to the second, and back to Barcelona, for both orders (Paris then Rome, or Rome then Paris). Each city gets the configured number of full days on the ground, meaning the flight in lands on day D and the flight out leaves on day D plus five for four full days. The first internal flight leaves at least five hours after the long-haul landing, and the last one lands in Barcelona at least a day before the flight home, because these are separate tickets and a delay would not be protected.
+
+Every leg is priced as a one-way ticket for the three passengers, nonstop only, using whichever airport of the city is cheapest (CDG or ORY for Paris). The grid is small, about 50 searches, so every run covers all of it. Prices are base fares without checked bags; low-cost carriers charge bags separately and the scraper cannot see those fees. The report lists the best schedules with a Google Flights link per leg and a Kayak link for all three legs together. Alerts go out on the first result, on every new best at least 5 percent cheaper than the previous one, and below `internal.alert_below_total` when that is set.
+
+Setting `mode: longhaul` restores the original Brazil to Europe search described below.
+
 ## How it searches
 
 Entering Europe through one city and leaving through another (an open-jaw trip) is often the cheapest way to cover three cities, so the agent does not assume a round trip. The search space is every Brazilian origin, every European gateway in the config, every outbound date in the window and every stay length. Pricing all of those combinations directly would mean thousands of searches per sweep, which is neither polite nor necessary, so the work is split in two levels.

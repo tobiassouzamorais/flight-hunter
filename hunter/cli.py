@@ -174,6 +174,19 @@ def main(argv=None):
         text = ("This is a test message from your Flight Hunter agent. If you are reading it, "
                 f"this alert channel works. You will be alerted when international flights for "
                 f"{cfg.passengers} people cost less than {money(cfg.max_flights_total)} {cfg.currency}.")
+        import yaml
+        if (yaml.safe_load(Path(a.config).read_text(encoding="utf-8")) or {}).get("mode") == "internal":
+            from . import internal
+            icfg = internal.load_internal(a.config)
+            text = ("This is a test message from your Flight Hunter agent. If you are reading it, "
+                    "this alert channel works. It is now searching the flights inside Europe.")
+            if Path(a.db).exists():
+                st = Store(a.db)
+                opts = internal.options(icfg, st)
+                st.close()
+                if opts:
+                    text += "\n\nCheapest schedule right now:\n" + internal.describe(icfg, opts[0])
+            raise SystemExit(0 if notify.send("Flight Hunter: test alert", text) else 1)
         if Path(a.db).exists():
             st = Store(a.db)
             rows = st.latest_cheapest(utcnow() - timedelta(hours=cfg.freshness_hours), cfg.passengers)
@@ -188,6 +201,21 @@ def main(argv=None):
                          + fmt(trip_links(t, cfg.passengers, cfg.currency, cfg.language)))
         ok = notify.send("Flight Hunter: test alert", text)
         raise SystemExit(0 if ok else 1)
+
+    import yaml
+    mode = (yaml.safe_load(Path(a.config).read_text(encoding="utf-8")) or {}).get("mode", "longhaul")
+    if mode == "internal" and a.command in ("run", "analyze"):
+        from . import internal
+        store = Store(a.db)
+        try:
+            if a.command == "run":
+                internal.run(a.config, store)
+            else:
+                internal.analyze(internal.load_internal(a.config), store, None)
+            store.prune(cfg.history_days)
+        finally:
+            store.close()
+        return
 
     store = Store(a.db)
     try:

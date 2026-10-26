@@ -1,3 +1,32 @@
+# What the agent searches. "internal" = the three flights inside Europe (long-haul already bought).
+# "longhaul" = the original Brazil to Europe search configured under `trip`.
+mode: internal
+
+internal:
+  passengers: 3
+  # Long-haul tickets already bought: landing in and flying home from the base city (local times).
+  base:
+    city: Barcelona
+    airports: [BCN]
+  arrive_base: 2027-02-09T08:15
+  depart_base: 2027-02-24T13:40
+  # Cities to visit, both orders are searched. Airports of the same city are interchangeable.
+  # Beauvais (BVA) and Ciampino (CIA) were left out: no nonstop flights to Barcelona came back for them.
+  cities:
+    Paris: [CDG, ORY]
+    Rome: [FCO]
+  # Whole days on the ground in each city (arrive on day D, leave on day D + full_days + 1).
+  full_days:
+    min: 4
+    max: 4
+  # The first internal flight leaves at least this long after landing; the last one lands in the
+  # base city at least one day before the flight home.
+  min_hours_after_arrival: 5
+  max_stops: 0
+  # Alert when the three flights together (all passengers) cost less than this. null = only
+  # "first result" and "new best" alerts.
+  alert_below_total: null
+
 # Flight Hunter configuration.
 # All prices are totals in `currency` for all passengers unless a field says "per person".
 

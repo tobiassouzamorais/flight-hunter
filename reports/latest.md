@@ -1,8 +1,8 @@
 # Flight Hunter report: flights inside Europe
 
-Generated 2026-10-31 15:50 UTC. 3 adults, arriving in Barcelona 09/02 08:15 and flying home 24/02 13:40 (local time). Visiting Paris and Rome with 4 to 4 full days each. First internal flight leaves at or after 14:00 on 09/02; the last one lands in Barcelona by 23/02.
+Generated 2026-10-31 16:04 UTC. 3 adults, arriving in Barcelona 09/02 08:15 and flying home 24/02 13:40 (local time). Visiting Paris and Rome with 4 to 4 full days each. First internal flight leaves at or after 14:00 on 09/02; the last one lands in Barcelona by 23/02.
 
-Last sweep: 50 searches, 42 with results, 8 empty, 0 failed.
+Last sweep: 50 searches, 44 with results, 6 empty, 0 failed.
 
 Prices are base fares for all passengers together, without checked bags. Low-cost carriers (Vueling, Ryanair, easyJet) charge bags separately, so compare with the bag fee added before buying.
 
